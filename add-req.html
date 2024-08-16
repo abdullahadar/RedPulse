@@ -27,6 +27,20 @@
     .font-poppins {
       font-family: "Poppins", sans-serif;
     }
+
+    .background-img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -30px;
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px);
+  
+      background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(./img/i.png);
+
+
+    }
   </style>
 
   <!-- custom button -->
@@ -71,36 +85,30 @@
               </div>
               <ul tabindex="0"
                 class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                <li class=" "><a href="index.html">Home</a></li>
+                <li><a>Home</a></li>
                 <li><a href="search.html">Search Donates</a></li>
-                <li><a href="add-req.html">Add Blood Request</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">LogIn</a></li>
+                <li><a>Add Blood Request</a></li>
+                <li><a>Register</a></li>
+                <li><a>LogIn</a></li>
               </ul>
             </div>
 
 
-            <a href="index.html">
+            <div class="btn btn-ghost text-xl  ">
+              <img class="h-8" src="img/icon/RedPlus.png">
 
-              <div class="btn btn-ghost text-xl">
-
-                <img class="h-8" src="img/icon/RedPlus.png">
-
-                <p class="font-bold text-xl">RedPlus</p>
-              </div>
-
-            </a>
-
+              <p class="font-bold text-xl ">RedPlus</p>
+            </div>
 
           </div>
 
 
           <div class="navbar-center hidden  lg:flex ">
-
+            
             <ul class="menu menu-horizontal  text-base font-normal px-1">
               <li class=" text-[#1a0403]"><a href="index.html">Home</a></li>
               <li><a href="search.html">Search Donates</a></li>
-              <li><a href="add-req.html">Add Blood Request</a></li>
+              <li><a>Add Blood Request</a></li>
               <li><a href="register.html">Register</a></li>
               <li><a href="login.html">LogIn</a></li>
             </ul>
@@ -121,62 +129,50 @@
   </header>
 
 
-  <section class="bg-gray-100 flex justify-center items-center min-h-screen">
-
-    <div class="bg-white shadow-md rounded-lg p-8 max-w-lg w-full">
-      <h2 class="text-2xl font-bold mb-6 text-center">Sign Up now!</h2>
-
-      <form action="#" method="POST" enctype="multipart/form-data">
-        <!-- Name -->
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-            Name
-          </label>
-          <input type="text" id="name" name="name"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="name" required>
-        </div>
-
-        <!-- Email -->
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-            Email
-          </label>
-          <input type="email" id="email" name="email"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="email" required>
-        </div>
-
-        <!-- Avatar -->
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="avatar">
-            Avatar
-          </label>
-          <input type="file" id="avatar" name="avatar"
-            class="w-full text-gray-500 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-gray-200 file:text-gray-700 hover:file:bg-gray-300">
-        </div>
-
-        <!-- Blood Group -->
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="blood-group">
-            Blood Group
-          </label>
-          <select id="blood-group" name="blood-group"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-            <option value="" disabled selected>Select Blood Group</option>
-            <option value="A+">A+</option>
-            <option value="A-">A-</option>
-            <option value="B+">B+</option>
-            <option value="B-">B-</option>
-            <option value="O+">O+</option>
-            <option value="O-">O-</option>
-            <option value="AB+">AB+</option>
-            <option value="AB-">AB-</option>
-          </select>
-        </div>
 
 
-        <!--Division and District  -->
+  <section class="bg-gray-100 mt-10 py-8 flex justify-center">
+    <div class="w-full max-w-lg mt-10 bg-white shadow-lg rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-center mb-6">Blood Request Form</h2>
+        <form>
+            <!-- Patient Name -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="patient-name">
+                    Patient Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="patient-name" type="text" placeholder="Enter patient's name">
+            </div>
+
+            <!-- Blood Group -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="bloodgroup">
+                    Blood Group
+                </label>
+                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="bloodgroup">
+                    <option value="" disabled selected>Select the required blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+
+            <!-- Hospital Name -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="hospital-name">
+                    Hospital Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="hospital-name" type="text" placeholder="Enter hospital's name">
+            </div>
+
+
+
+
+             <!--Division and District  -->
         <div class="mb-4 grid grid-cols-2 gap-4">
 
 
@@ -224,35 +220,38 @@
 
 
         </div>
+        
+            <!-- Contact Name -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-name">
+                    Contact Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="contact-name" type="text" placeholder="Enter contact person's name">
+            </div>
 
+            <!-- Contact Phone Number -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-phone">
+                    Contact Phone Number
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="contact-phone" type="text" placeholder="Enter contact phone number">
+            </div>
 
-        <!-- Password -->
-        <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-            Password
-          </label>
-          <input type="password" id="password" name="password"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="password" required>
-        </div>
+            <!-- Required Date -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="required-date">
+                    Required Date
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="required-date" type="date">
+            </div>
 
-        <!-- Register Button -->
-        <div class="flex items-center justify-center">
-          <button type="submit"
-            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            Register
-          </button>
-        </div>
-      </form>
-
-      <!-- Login Link -->
-      <div class="text-center mt-4">
-        <p class="text-gray-600">Already have an account? 
-          <a href="login.html"class="text-blue-500 hover:text-blue-700 font-bold">Go to login</a></p>
-      </div>
+            <!-- Submit Button -->
+            <div class="flex items-center justify-end">
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Submit Request
+                </button>
+            </div>
+        </form>
     </div>
-
   </section>
-
-
 </body>
