@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RedPlus</title>
+
+
+
+  <!-- font awesome link  -->
+  <script src="https://kit.fontawesome.com/e1ba9ded83.js" crossorigin="anonymous"></script>
+
+  <!-- daisyui and tailwind css -->
+
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    .font-poppins {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+
+  <!-- custom button -->
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'red-color': '#FF4240',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Favicon -->
+  <link href="img/icon/RedPlus.png" rel="shortcut icon" type="image/png">
+
+
+
+</head>
+
+<body class="font-poppins">
+
+  <header>
+
+    <!---------- nav start ----------->
+
+
+    <div class="fixed top-0 left-0 right-0 bg-red-color  lg:text-white  z-50">
+      <nav class="container mx-auto">
+        <div class="navbar ">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+              </div>
+              <ul tabindex="0"
+                class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li class=""><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Donates</a></li>
+                <li><a>Add Blood Request</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">LogIn</a></li>
+              </ul>
+            </div>
+
+
+            <a href="index.html">
+
+              <div class="btn btn-ghost text-xl">
+
+                <img class="h-8" src="img/icon/RedPlus.png">
+
+                <p class="font-bold text-xl">RedPlus</p>
+              </div>
+
+            </a>
+
+
+          </div>
+
+
+          <div class="navbar-center hidden  lg:flex ">
+
+            <ul class="menu menu-horizontal  text-base font-normal px-1">
+              <li class=" text-[#1a0403]"><a href="index.html">Home</a></li>
+              <li><a href="search.html">Search Donates</a></li>
+              <li><a>Add Blood Request</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="login.html">LogIn</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end rounded-lg ">
+            <div class="join  text-black">
+              <input class="input input-bordered rounded-3xl join-item" placeholder="Search Donors" />
+
+              <i
+                class="fa-solid fa-magnifying-glass btn btn-ghost join-item rounded-r-full bg-white  text-black p-4"></i>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </header>
+
+
+  <section class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+    <div class="bg-white shadow-md rounded-lg p-8 max-w-lg w-full">
+      <h2 class="text-2xl font-bold mb-6 text-center">Sign Up now!</h2>
+
+      <form action="#" method="POST" enctype="multipart/form-data">
+        <!-- Name -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            Name
+          </label>
+          <input type="text" id="name" name="name"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+            Email
+          </label>
+          <input type="email" id="email" name="email"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="email" required>
+        </div>
+
+        <!-- Avatar -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="avatar">
+            Avatar
+          </label>
+          <input type="file" id="avatar" name="avatar"
+            class="w-full text-gray-500 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-gray-200 file:text-gray-700 hover:file:bg-gray-300">
+        </div>
+
+        <!-- Blood Group -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="blood-group">
+            Blood Group
+          </label>
+          <select id="blood-group" name="blood-group"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="" disabled selected>Select Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </div>
+
+
+        <!--Division and District  -->
+        <div class="mb-4 grid grid-cols-2 gap-4">
+
+
+          <!-- Division -->
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="division">
+              Division
+            </label>
+            <select
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="division">
+              <option value="" disabled selected>Select your division</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Chittagong">Chittagong</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Barisal">Barisal</option>
+              <option value="Rangpur">Rangpur</option>
+              <option value="Mymensingh">Mymensingh</option>
+            </select>
+          </div>
+
+
+
+
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="district">
+              District
+            </label>
+            <select
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="district">
+              <option value="" disabled selected>Select your district</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Cox's Bazar">Cox's Bazar</option>
+              <option value="Comilla">Comilla</option>
+              <option value="Barisal">Barisal</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <!-- Add more districts as needed -->
+            </select>
+          </div>
+
+
+
+        </div>
+
+        <!-- Password -->
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Password
+          </label>
+          <input type="password" id="password" name="password"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="password" required>
+        </div>
+
+        <!-- Register Button -->
+        <div class="flex items-center justify-center">
+          <button type="submit"
+            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Register
+          </button>
+        </div>
+      </form>
+
+      <!-- Login Link -->
+      <div class="text-center mt-4">
+        <p class="text-gray-600">Already have an account? 
+          <a href="login.html"class="text-blue-500 hover:text-blue-700 font-bold">Go to login</a></p>
+      </div>
+    </div>
+
+  </section>
+
+
+</body>

@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedPlus</title>
+
+
+
+    <!-- font awesome link  -->
+    <script src="https://kit.fontawesome.com/e1ba9ded83.js" crossorigin="anonymous"></script>
+
+    <!-- daisyui and tailwind css -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+
+    <!-- custom button -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'red-color': '#FF4240',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link href="img/icon/RedPlus.png" rel="shortcut icon" type="image/png">
+
+
+
+</head>
+
+<body class="font-poppins">
+
+    <header>
+
+        <!---------- nav start ----------->
+
+
+        <div class="fixed top-0 left-0 right-0 bg-red-color  lg:text-white  z-50">
+            <nav class="container mx-auto">
+                <div class="navbar ">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li class=""><a href="index.html">Home</a></li>
+                                <li><a href="search.html">Search Donates</a></li>
+                                <li><a>Add Blood Request</a></li>
+                                <li><a href="register.html">Register</a></li>
+                                <li><a href="login.html">LogIn</a></li>
+                            </ul>
+                        </div>
+                        
+
+                       <a href="index.html">
+
+                        <div  class="btn btn-ghost text-xl">
+
+                            <img class="h-8" src="img/icon/RedPlus.png">
+
+                            <p class="font-bold text-xl">RedPlus</p>
+                        </div>
+
+                       </a>
+
+
+                    </div>
+
+
+                    <div class="navbar-center hidden  lg:flex ">
+
+                        <ul class="menu menu-horizontal  text-base font-normal px-1">
+                            <li class=" text-[#1a0403]"><a href="index.html">Home</a></li>
+                            <li><a href="search.html">Search Donates</a></li>
+                            <li><a>Add Blood Request</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li><a href="login.html">LogIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end rounded-lg ">
+                        <div class="join  text-black">
+                            <input class="input input-bordered rounded-3xl join-item" placeholder="Search Donors" />
+
+                            <i
+                                class="fa-solid fa-magnifying-glass btn btn-ghost join-item rounded-r-full bg-white  text-black p-4"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+
+
+    <!-- search Donor section-->
+
+    <section class="mt-10">
+        <div class="  bg-cover bg-no-repeat bg-[url(./img/bg.1.png)] border-black ">
+            <div class="container mx-auto  py-20">
+                <h2 class="text-3xl font-medium text-center  text-black ">Search A Donor</h2>
+
+
+                <body class=" flex items-center justify-between  min-h-screen">
+                    <div class="p-8 rounded-lg shadow-2xl">
+                        <!-- <h2 class="text-2xl font-bold mb-6">Search for Blood Donors</h2> -->
+                        <form class="">
+                            <div class="flex flex-col lg:flex-row gap-4 ">
+
+
+                                <!-- Blood Group -->
+                                <div class="mb-4 flex-1">
+                                    <label for="blood-group" class="block text-gray-700 font-bold mb-2">Blood
+                                        Group</label>
+                                    <select id="blood-group" class="block w-full border border-gray-300 rounded-lg p-2">
+                                        <option value="">Select Blood Group</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                </div>
+
+
+                                <!-- Division -->
+                                <div class="mb-4 flex-1">
+                                    <label for="division" class="block text-gray-700 font-bold mb-2">Division</label>
+                                    <select id="division" class="block w-full border border-gray-300 rounded-lg p-2">
+                                        <option value="">Select Division</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Chittagong">Chittagong</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Barisal">Barisal</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Rangpur">Rangpur</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                    </select>
+                                </div>
+
+
+
+                                <!-- District -->
+                                <div class="mb-4 flex-1">
+                                    <label for="district" class="block text-gray-700 font-bold mb-2">District</label>
+                                    <select id="district" class="block w-full border border-gray-300 rounded-lg p-2">
+                                        <option value="">Select District</option>
+                                        <!-- Add more district options here based on the selected division -->
+                                    </select>
+                                </div>
+
+
+
+
+
+
+                                <!-- Date -->
+                                <div class="mb-4 flex-1">
+                                    <label for="date" class="block text-gray-700 font-bold mb-2">Date</label>
+                                    <input type="date" id="date"
+                                        class="block w-full border border-gray-300 rounded-lg p-2">
+                                </div>
+
+
+                                <!-- Search Button -->
+                                <div class="mb-4 flex-1">
+                                    <button type="submit"
+                                        class="w-full mt-8 bg-green-400 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-color">
+                                        Search
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </body>
+            </div>
+
+
+
+
+
+            <!------------- Recent Donars ------------>
+
+            <section class="mx-auto container bg-base-200 rounded-lg px-8 ">
+
+                <h2 class="text-3xl text-center py-10 font-bold">Reacent Donars</h2>
+
+                <div class="carousel w-full">
+
+                    <!-- item1 -->
+
+                    <div id="item1" class="carousel-item w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg pb-8">
+
+                            <!-------------- first 1 card   ------- -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2nd card ---- -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/edhi.jpeg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">A+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi
+                                                Hasan</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3rd card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                Karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Chittagong</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 4th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-1.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                Karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/edhi-1.JPG" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi
+                                                Hasan</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 6th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 7th card -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 8th card  -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 9th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+                    <!---- item2 ----->
+
+                    <div id="item2" class="carousel-item w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg pb-8">
+
+                            <!-------------- first 1 card   ------- -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/edhi-3.JPG" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2nd card ---- -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi
+                                                Hasan</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3rd card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-1.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 4th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                Karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 6th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 7th card -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 8th card  -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 9th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- item 3  -->
+
+
+                    <div id="item3" class="carousel-item w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg pb-8">
+
+                            <!-------------- first 1 card   ------- -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2nd card ---- -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/edhi-1.JPG" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi
+                                                Hasan</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3rd card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-1.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 4th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/edhi-1.JPG" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-1.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                Karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 6th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 7th card -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 8th card  -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 9th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!---- item 4 ----- -->
+
+                    <div id="item4" class="carousel-item w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg pb-8">
+
+                            <!-------------- first 1 card   ------- -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/edhi-1.JPG" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2nd card ---- -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3rd card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/edhi-3.JPG" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 4th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 6th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/adar.jpg" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span
+                                                class="text-black">Abdullah</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- 7th card -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 8th card  -->
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 9th card  -->
+
+                            <div class="card card-side bg-base-100 px-5 shadow-xl">
+                                <figure class="w-1/4 ">
+                                    <img src="img/basit-2.JPG" alt="Movie" />
+                                </figure>
+
+                                <div class="card-body w-2/3 text-red-500">
+                                    <h2 class="card-title text-2xl">O+</h2>
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit
+                                                karim</span></p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-building"></i>
+                                        <p> Location:
+                                            <span class="text-black">Cox'sBazar</span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="flex gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                                    </div>
+
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="flex w-full justify-center gap-2 py-2">
+                    <a href="#item1" class="btn btn-xs">1</a>
+                    <a href="#item2" class="btn btn-xs">2</a>
+                    <a href="#item3" class="btn btn-xs">3</a>
+                    <a href="#item4" class="btn btn-xs">4</a>
+                </div>
+
+        </div>
+
+    </section>
+
+
+    </section>
+
+
+
+
+    <footer class="pt-10">
+
+        <footer class="footer bg-neutral items-center text-neutral-content p-10">
+            <aside class="ml-20">
+                <img src="img/premier lago.png" class="h-24" alt="">
+                <p>
+                    Premier University.
+                    <br />
+                    Providing reliable tech since 2002
+                </p>
+            </aside>
+            <nav class="">
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Company</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Legal</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </nav>
+        </footer>
+
+
+        <footer class="footer footer-center  bg-neutral text-neutral-content p-4">
+            <aside>
+                <p>Copyright © 2024 - All right reserved by Premier University</p>
+            </aside>
+        </footer>
+
+
+    </footer>
+
+</body>
