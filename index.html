@@ -27,6 +27,20 @@
     .font-poppins {
       font-family: "Poppins", sans-serif;
     }
+
+    .background-img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -30px;
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px);
+  
+      background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(./img/i.png);
+
+
+    }
   </style>
 
   <!-- custom button -->
@@ -85,7 +99,10 @@
               <a class="font-bold text-xl">RedPlus</a>
             </div>
           </div>
+
+
           <div class="navbar-center hidden  lg:flex ">
+            
             <ul class="menu menu-horizontal  text-base font-normal px-1">
               <li class=" text-[#1a0403]"><a>Home</a></li>
               <li><a>Search Donates</a></li>
@@ -95,38 +112,31 @@
             </ul>
           </div>
           <div class="navbar-end rounded-lg ">
-
-            <div class="join text-black">
+            <div class="join  text-black">
               <input class="input input-bordered rounded-3xl join-item" placeholder="Search Donors" />
-              <!-- <button class="btn join-item rounded-r-full"></button> -->
+
               <i
                 class="fa-solid fa-magnifying-glass btn btn-ghost join-item rounded-r-full bg-white  text-black p-4"></i>
             </div>
 
-            <!-- <div class="flex rounded-full  items-center px-4  text-black bg-white"> -->
-
-            <!-- <input type="text" placeholder="Search Doners " class=" text-sm ">
-              <i class="fa-solid fa-magnifying-glass btn btn-ghost   text-black p-4"></i> -->
           </div>
         </div>
-    </div>
-    </nav>
+      </nav>
     </div>
 
   </header>
   <main class="">
 
-    <section class="mx-auto border-none  relative mt-16">
-      <div
-        class=" h-[620px] bg-cover bg-fixed blur-sm bg-no-repeat bg-[linear-gradient(45deg,rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url(./img/i.png)]">
+    <section class="mx-auto border-none  relative ">
 
+      <div class="background-img h-[100%] lg:h-[620px] bg-fixed bg-cover">
+        <!-- background img -->
       </div>
-
 
 
       <!-- Container part -->
 
-      <div class="lg:ml-40 mt-24 absolute text-white top-10 ">
+      <div class="lg:ml-40 mt-24 relative text-white top-10 p-5 ">
         <div class="mx-auto container  py-20 justify-center  ">
           <h1 class="text-6xl font-semibold  ">The gift of blood is a gift <br> to someones life</h1>
           <p class="my-10 text-xl font-medium">Bloodology help with anything related to blood. It helps manage blood
@@ -134,7 +144,7 @@
             and events where <br>
             people can give blood. It also links up donors with people who need blood. Bloodology makes <br> it simple
             to get involved in this important work.</p>
-          <div class="flex gap-4 ">
+          <div class="flex flex-col lg:flex-row  mr-36 gap-4 ">
             <button class="btn bg-red-color  text-white border-none shadow-lg">Join as a Donors</button>
             <button class="btn ">Search Donars</button>
           </div>
@@ -144,13 +154,13 @@
     </section>
 
 
-    <!-- Main Content -->
+    <!--About section -->
 
-    <section class="my-14 p-4 container mx-auto">
+    <section class="lg:mt-36 container mx-auto">
       <h2 class="text-3xl font-medium mx-auto text-center  text-black my-10">About Blood Donation</h2>
 
-      <div class="flex gap-5">
-        <div class="flex-1 p-14 bg-gray-300 rounded-lg">
+      <div class="lg:flex  gap-5">
+        <div class="flex-1 p-14 mb-6 bg-gray-300 rounded-lg">
           <h1 class="text-3xl font-bold mt-5 mb-6">what is blood donation?</h1>
           <p class="mb-4 text-base">Blood donation is a voluntary procedure where a person gives their blood to be used
             for transfusions or made into medications. The process is crucial in healthcare, providing necessary blood
@@ -158,7 +168,7 @@
           </p>
 
         </div>
-        <div class="flex-1 ">
+        <div class="flex-1 mb-6 ">
           <img src="img/blood donate.jpg" class="rounded-lg" alt="">
         </div>
       </div>
@@ -167,7 +177,7 @@
 
 
 
-    <!-- About section -->
+    <!-- search Donor section-->
 
     <section class="">
       <div class="  bg-cover bg-no-repeat bg-[url(./img/bg.1.png)] border-black ">
@@ -179,7 +189,7 @@
             <div class="p-8 rounded-lg shadow-2xl">
               <!-- <h2 class="text-2xl font-bold mb-6">Search for Blood Donors</h2> -->
               <form class="">
-                <div class="flex gap-4 ">
+                <div class="flex flex-col lg:flex-row gap-4 ">
 
 
                   <!-- Blood Group -->
@@ -196,7 +206,6 @@
                       <option value="AB+">AB+</option>
                       <option value="AB-">AB-</option>
                     </select>
-
                   </div>
 
 
@@ -258,19 +267,20 @@
         <!---------- search blood group---- -->
 
 
-        <section class="mx-auto bg-base-200 container py-6 shadow-2xl">
+        <section class="mx-auto bg-base-200 container py-6 ">
 
           <h2 class="text-3xl font-medium text-center text-black  my-14 ">Blood Group</h2>
 
-          <div class="flex justify-center px-40 mb-10">
+          <div class="flex justify-center lg:px-40 mb-10">
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-4  ">
 
               <div class=" rounded-lg">
                 <div class="card w-full max-w-xs shrink-0 shadow-2xl">
                   <form class="">
                     <div class="">
-                      <img src="img/blood-bag (2).png" class="btn h-auto bg-base-100 " alt="">
+                      <img src="img/icon/a+.png" class="btn h-auto bg-base-100 " alt="">
                     </div>
+                  </form>
                 </div>
                 </form>
               </div>
@@ -280,19 +290,7 @@
                 <div class="card w-full max-w-xs shrink-0 shadow-2xl">
                   <form class="">
                     <div class="">
-                      <img src="img/blood-bag (2).png" class="btn h-auto bg-base-100 " alt="">
-                    </div>
-                </div>
-                </form>
-              </div>
-
-
-
-              <div class=" rounded-lg">
-                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
-                  <form class="">
-                    <div class="">
-                      <img src="img/blood-bag (2).png" class="btn h-auto bg-base-100 " alt="">
+                      <img src="img/icon/a-.png" class="btn h-auto bg-base-100 " alt="">
                     </div>
                 </div>
                 </form>
@@ -304,7 +302,19 @@
                 <div class="card w-full max-w-xs shrink-0 shadow-2xl">
                   <form class="">
                     <div class="">
-                      <img src="img/blood-bag (2).png" class="btn h-auto bg-base-100 " alt="">
+                      <img src="img/icon/ab+.png" class="btn h-auto bg-base-100 " alt="">
+                    </div>
+                </div>
+                </form>
+              </div>
+
+
+
+              <div class=" rounded-lg">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/Ab-.png" class="btn h-auto bg-base-100 " alt="">
                     </div>
                 </div>
                 </form>
@@ -314,7 +324,7 @@
                 <div class="card w-full max-w-xs shrink-0 shadow-2xl">
                   <form class="">
                     <div class="">
-                      <img src="img/blood-bag (2).png" class="btn h-auto bg-base-100 " alt="">
+                      <img src="img/icon/b+.png" class="btn h-auto bg-base-100 " alt="">
                     </div>
                 </div>
                 </form>
@@ -324,7 +334,7 @@
                 <div class="card w-full max-w-xs shrink-0 shadow-2xl">
                   <form class="">
                     <div class="">
-                      <img src="img/blood-bag (2).png" class="btn h-auto bg-base-100 " alt="">
+                      <img src="img/icon/b-.png" class="btn h-auto bg-base-100 " alt="">
                     </div>
                 </div>
                 </form>
@@ -334,7 +344,7 @@
                 <div class="card w-full max-w-xs shrink-0 shadow-2xl">
                   <form class="">
                     <div class="">
-                      <img src="img/blood-bag (2).png" class="btn h-auto bg-base-100 " alt="">
+                      <img src="img/icon/o+.png" class="btn h-auto bg-base-100 " alt="">
                     </div>
                 </div>
                 </form>
@@ -344,7 +354,7 @@
                 <div class="card w-full max-w-xs shrink-0 shadow-2xl">
                   <form class="">
                     <div class="">
-                      <img src="img/blood-bag (2).png" class="btn h-auto bg-base-100 " alt="">
+                      <img src="img/icon/o-.png" class="btn h-auto bg-base-100 " alt="">
                     </div>
                 </div>
                 </form>
@@ -364,581 +374,1288 @@
     <!---------- background section --------- -->
     <section class="  bg-cover bg-no-repeat bg-[url(./img/bg.1.png)] border-black ">
 
-      <div class="pt-1" >
-
-      <!------------- Recent Donate ------------>
+      <div class="pt-1">
 
 
-      <section class="mx-auto container shadow-2xl bg-base-200 rounded-lg px-8 mt-20">
+        <!------------- Recent Donars ------------>
 
-        <h2 class="text-3xl text-center py-10 font-bold">Reacent Donars</h2>
+        <section class="mx-auto container bg-base-200 rounded-lg px-8 mt-20">
 
-        <div class="grid grid-cols-1 grid-cols-3 gap-4 rounded-lg pb-8">
+          <h2 class="text-3xl text-center py-10 font-bold">Reacent Donars</h2>
 
-          <!-------------- first 1 card   ------- -->
+            <div class="carousel w-full">
 
-          <div class="card card-side bg-base-100 px-5 shadow-xl">
-            <figure class="w-1/4 ">
-              <img src="img/adar.jpg" alt="Movie" />
-            </figure>
+              <!-- item1 -->
 
+              <div id="item1" class="carousel-item w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg pb-8">
 
-            <div class="card-body w-2/3 text-red-500">
-              <h2 class="card-title text-2xl">O+</h2>
-              <div class="flex gap-2">
-                <i class="fa-solid fa-user"></i>
-                <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                  <!-------------- first 1 card   ------- -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 2nd card ---- -->
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/edhi.jpeg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">A+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi Hasan</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 3rd card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/basit.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit Karim</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Chittagong</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+      
+                  <!-- 4th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/basit-1.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit Karim</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 5th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/edhi-1.JPG" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi Hasan</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+      
+                  <!-- 6th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/basit-2.JPG" alt="Movie" />
+                    </figure>
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit karim</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                </div>
               </div>
 
 
-              <div class="flex gap-2">
-                <i class="fa-solid fa-building"></i>
-                <p> Location:
-                  <span class="text-black">Cox'sBazar</span>
-                </p>
+              <!---- item2 ----->
+
+              <div id="item2" class="carousel-item w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg pb-8">
+
+                  <!-------------- first 1 card   ------- -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/edhi-3.JPG" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 2nd card ---- -->
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi Hasan</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 3rd card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/basit-1.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+      
+                  <!-- 4th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 5th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/basit-2.JPG" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit Karim</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+      
+                  <!-- 6th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                </div>
+
               </div>
 
 
-              <div class="flex gap-2">
-                <i class="fa-solid fa-calendar-days"></i>
-                <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+              <!-- item 3  -->
+
+
+              <div id="item3" class="carousel-item w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg pb-8">
+
+                  <!-------------- first 1 card   ------- -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 2nd card ---- -->
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/edhi-1.JPG" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi Hasan</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 3rd card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/basit-1.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+      
+                  <!-- 4th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/edhi-1.JPG" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Edhi</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 5th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/basit-1.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Basit Karim</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+      
+                  <!-- 6th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                </div>
+
               </div>
 
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">View Details</button>
+
+              <!---- item 4 ----- -->
+
+              <div id="item4" class="carousel-item w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg pb-8">
+
+                  <!-------------- first 1 card   ------- -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/edhi-1.JPG" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 2nd card ---- -->
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 3rd card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/edhi-3.JPG" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+      
+                  <!-- 4th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/basit.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 5th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+      
+                  <!-- 6th card  -->
+      
+                  <div class="card card-side bg-base-100 px-5 shadow-xl">
+                    <figure class="w-1/4 ">
+                      <img src="img/adar.jpg" alt="Movie" />
+                    </figure>
+      
+                    <div class="card-body w-2/3 text-red-500">
+                      <h2 class="card-title text-2xl">O+</h2>
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-building"></i>
+                        <p> Location:
+                          <span class="text-black">Cox'sBazar</span>
+                        </p>
+                      </div>
+      
+      
+                      <div class="flex gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+                      </div>
+      
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                </div>
+
               </div>
+
+
             </div>
+            <div class="flex w-full justify-center gap-2 py-2">
+              <a href="#item1" class="btn btn-xs">1</a>
+              <a href="#item2" class="btn btn-xs">2</a>
+              <a href="#item3" class="btn btn-xs">3</a>
+              <a href="#item4" class="btn btn-xs">4</a>
+            </div>
+
           </div>
 
-          <!-- 2nd card ---- -->
-          <div class="card card-side bg-base-100 px-5 shadow-xl">
-            <figure class="w-1/4 ">
-              <img src="img/adar.jpg" alt="Movie" />
-            </figure>
 
 
-            <div class="card-body w-2/3 text-red-500">
-              <h2 class="card-title text-2xl">O+</h2>
-              <div class="flex gap-2">
-                <i class="fa-solid fa-user"></i>
-                <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
+
+
+        </section>
+
+
+        <!-------------- Latest News ---- ----- -->
+
+        <section class="mx-auto container  bg-base-200 rounded-lg px-8 mt-20">
+
+          <h2 class="text-3xl text-center pt-10 font-bold">Latest News</h2>
+
+
+
+          <div>
+            <div class="carousel w-full">
+
+              <!-- item1 -->
+
+              <div id="item-1" class="carousel-item w-full">
+                <div class=" flex flex-col lg:flex-row gap-5 py-8">
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-1.jpg" alt=""
+                          class="rounded-xl h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="">
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5 h-[]">
+                        <img src="img/blog-2.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-3.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-4.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
               </div>
 
 
-              <div class="flex gap-2">
-                <i class="fa-solid fa-building"></i>
-                <p> Location:
-                  <span class="text-black">Cox'sBazar</span>
-                </p>
+
+
+              <!---- item2 ----->
+
+              <div id="item-2" class="carousel-item w-full">
+                <div class=" flex flex-col lg:flex-row gap-5 py-8">
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-2.jpg" alt=""
+                          class="rounded-xl h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="">
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5 h-[]">
+                        <img src="img/blog-2.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-3.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-4.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+
               </div>
 
 
-              <div class="flex gap-2">
-                <i class="fa-solid fa-calendar-days"></i>
-                <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
+              <!-- item 3  -->
+
+
+              <div id="item-3" class="carousel-item w-full">
+                <div class=" flex flex-col lg:flex-row gap-5 py-8">
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-2.jpg" alt=""
+                          class="rounded-xl h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="">
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5 h-[]">
+                        <img src="img/blog-1.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-2.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-2.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
               </div>
 
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">View Details</button>
+
+              <!---- item 4 ----- -->
+
+              <div id="item-4" class="carousel-item w-full">
+                <div class=" flex flex-col lg:flex-row gap-5 py-8">
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-1.jpg" alt=""
+                          class="rounded-xl h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="">
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5 h-[]">
+                        <img src="img/blog-3.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-1.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div >
+                    <div class="card bg-base-100 max-w-lg shadow-xl">
+                      <figure class="px-5 pt-5">
+                        <img src="img/blog-4.jpg" alt=""
+                          class="rounded-xl  h-44" />
+                      </figure>
+                      <div class="card-body  ">
+                        <h2 class="card-title">What Blood Types Are the Universal Donor and Universal Recipient? </h2>
+                        <p> Date: Dec 25, 2023</p>
+                        <p>Discover the significance of universal donor and recipient blood types.</p>
+                        <div class="card-actions flex justify-end">
+                          <button class="btn btn-primary">Read more</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
               </div>
+
+
             </div>
+            <div class="flex w-full justify-center gap-2 py-2">
+              <a href="#item-1" class="btn btn-xs">1</a>
+              <a href="#item-2" class="btn btn-xs">2</a>
+              <a href="#item-3" class="btn btn-xs">3</a>
+              <a href="#item-4" class="btn btn-xs">4</a>
+            </div>
+
           </div>
 
-          <!-- 3rd card  -->
-
-          <div class="card card-side bg-base-100 px-5 shadow-xl">
-            <figure class="w-1/4 ">
-              <img src="img/adar.jpg" alt="Movie" />
-            </figure>
-
-
-            <div class="card-body w-2/3 text-red-500">
-              <h2 class="card-title text-2xl">O+</h2>
-              <div class="flex gap-2">
-                <i class="fa-solid fa-user"></i>
-                <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
-              </div>
-
-
-              <div class="flex gap-2">
-                <i class="fa-solid fa-building"></i>
-                <p> Location:
-                  <span class="text-black">Cox'sBazar</span>
-                </p>
-              </div>
-
-
-              <div class="flex gap-2">
-                <i class="fa-solid fa-calendar-days"></i>
-                <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
-              </div>
-
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">View Details</button>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- 4th card  -->
-
-          <div class="card card-side bg-base-100 px-5 shadow-xl">
-            <figure class="w-1/4 ">
-              <img src="img/adar.jpg" alt="Movie" />
-            </figure>
-
-
-            <div class="card-body w-2/3 text-red-500">
-              <h2 class="card-title text-2xl">O+</h2>
-              <div class="flex gap-2">
-                <i class="fa-solid fa-user"></i>
-                <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
-              </div>
-
-
-              <div class="flex gap-2">
-                <i class="fa-solid fa-building"></i>
-                <p> Location:
-                  <span class="text-black">Cox'sBazar</span>
-                </p>
-              </div>
-
-
-              <div class="flex gap-2">
-                <i class="fa-solid fa-calendar-days"></i>
-                <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
-              </div>
-
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">View Details</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5th card  -->
-
-          <div class="card card-side bg-base-100 px-5 shadow-xl">
-            <figure class="w-1/4 ">
-              <img src="img/adar.jpg" alt="Movie" />
-            </figure>
-
-
-            <div class="card-body w-2/3 text-red-500">
-              <h2 class="card-title text-2xl">O+</h2>
-              <div class="flex gap-2">
-                <i class="fa-solid fa-user"></i>
-                <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
-              </div>
-
-
-              <div class="flex gap-2">
-                <i class="fa-solid fa-building"></i>
-                <p> Location:
-                  <span class="text-black">Cox'sBazar</span>
-                </p>
-              </div>
-
-
-              <div class="flex gap-2">
-                <i class="fa-solid fa-calendar-days"></i>
-                <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
-              </div>
-
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">View Details</button>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- 6th card  -->
-
-          <div class="card card-side bg-base-100 px-5 shadow-xl">
-            <figure class="w-1/4 ">
-              <img src="img/adar.jpg" alt="Movie" />
-            </figure>
-
-            <div class="card-body w-2/3 text-red-500">
-              <h2 class="card-title text-2xl">O+</h2>
-              <div class="flex gap-2">
-                <i class="fa-solid fa-user"></i>
-                <p class="text-red-color">Recipient Name: <span class="text-black">Abdullah</span></p>
-              </div>
-
-
-              <div class="flex gap-2">
-                <i class="fa-solid fa-building"></i>
-                <p> Location:
-                  <span class="text-black">Cox'sBazar</span>
-                </p>
-              </div>
-
-
-              <div class="flex gap-2">
-                <i class="fa-solid fa-calendar-days"></i>
-                <p> Date: <samp class="text-black"> Wed, 19 Jun 2024 11:05:48 GMT</samp></p>
-              </div>
-
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">View Details</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-------------- Latest News ---- ----- -->
-
-      <section class="mx-auto container shadow-2xl bg-base-200 rounded-lg px-8 mt-20">
-
-        <h2 class="text-3xl text-center pt-10 font-bold">Latest News</h2>
-
-      
-
-        <div>
-          <div class="carousel w-full">
-
-            <!-- item1 -->
-
-            <div id="item1" class="carousel-item w-full">
-              <div class=" flex gap-5 py-8">
-
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-5 pt-5">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-              </div>
-      
-            </div>
-
-
-            <!---- item2 ----->
-
-            <div id="item2" class="carousel-item w-full">
-              <div class=" flex gap-5 py-8">
-
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-5 pt-5">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-              </div>
-      
-            </div>
-
-
-            <!-- item 3  -->
-
-
-            <div id="item3" class="carousel-item w-full">
-              <div class=" flex gap-5 py-8">
-
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-5 pt-5">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-              </div>
-      
-            </div>
-
-
-            <!---- item 4 ----- -->
-
-            <div id="item4" class="carousel-item w-full">
-              <div class=" flex gap-5 py-8">
-
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-5 pt-5">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-                <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                        class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-      
-      
-              </div>
-      
-            </div>
-
-
-          </div>
-          <div class="flex w-full justify-center gap-2 py-2">
-            <a href="#item1" class="btn btn-xs">1</a>
-            <a href="#item2" class="btn btn-xs">2</a>
-            <a href="#item3" class="btn btn-xs">3</a>
-            <a href="#item4" class="btn btn-xs">4</a>
-          </div>
-  
-        </div>
-  
-      </section>
+        </section>
 
     </section>
 
@@ -951,7 +1668,7 @@
 
     <footer class="footer  bg-neutral text-neutral-content p-10">
       <aside>
-       <img src="img/icon/RedPlus.png" class="h-8" alt="">
+        <img src="img/premier lago.png" class="h-24" alt="">
         <p>
           Premier University.
           <br />
@@ -980,7 +1697,7 @@
       </nav>
     </footer>
 
-   
+
     <footer class="footer footer-center  bg-neutral text-neutral-content p-4">
       <aside>
         <p>Copyright © 2024 - All right reserved by Premier University</p>
