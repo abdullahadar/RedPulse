@@ -58,67 +58,75 @@
         <!---------- nav start ----------->
 
 
-        <div class="fixed top-0 left-0 right-0 bg-red-color  lg:text-white  z-50">
-            <nav class="container mx-auto">
-                <div class="navbar ">
-                    <div class="navbar-start">
-                        <div class="dropdown">
-                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
-                            </div>
-                            <ul tabindex="0"
-                                class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                <li class=" "><a href="index.html">Home</a></li>
-                                <li><a href="search.html">Search Donates</a></li>
-                                <li><a href="add-req.html">Add Blood Request</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="login.html">LogIn</a></li>
-                            </ul>
-                        </div>
-                        
+       
 
-                       <a href="index.html">
-
-                        <div  class="btn btn-ghost text-xl">
-
-                            <img class="h-8" src="img/icon/RedPlus.png">
-
-                            <p class="font-bold text-xl">RedPlus</p>
-                        </div>
-
-                       </a>
-
-
-                    </div>
-
-
-                    <div class="navbar-center hidden  lg:flex ">
-
-                        <ul class="menu menu-horizontal  text-base font-normal px-1">
-                            <li class=" text-[#1a0403]"><a href="index.html">Home</a></li>
-                            <li><a href="search.html">Search Donates</a></li>
-                            <li><a href="add-req.html">Add Blood Request</a></li>
-                            <li><a href="register.html">Register</a></li>
-                            <li><a href="login.html">LogIn</a></li>
-                        </ul>
-                    </div>
-                    <div class="navbar-end rounded-lg ">
-                        <div class="join  text-black">
-                            <a href="search.html">
-                              <input class="input input-bordered rounded-3xl join-item" placeholder="Search Donors" />
-                            </a>
-                            <i
-                              class="fa-solid fa-magnifying-glass btn btn-ghost join-item rounded-r-full bg-white  text-black p-4"></i>
-                          </div>
-
-                    </div>
+    <div class="fixed top-0 left-0 right-0 bg-red-color  lg:text-white  z-50">
+        <nav class="container mx-auto">
+          <div class="navbar ">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
                 </div>
-            </nav>
-        </div>
+                <ul tabindex="0"
+                  class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li class=""><a href="index.html">Home</a></li>
+                  <li><a href="search.html">Search Donates</a></li>
+                  <li><a href="add-req.html">Add Blood Request</a></li>
+                  <li><a href="register.html">Register</a></li>
+                  <li><a href="login.html">LogIn</a></li>
+                </ul>
+              </div>
+  
+  
+              <div class="btn btn-ghost text-xl  ">
+                <img class="h-8" src="img/icon/RedPlus.png">
+  
+                <p class="font-bold text-xl ">RedPlus</p>
+              </div>
+  
+            </div>
+  
+  
+            <div class="navbar-center hidden lg:flex ">
+  
+              <ul class="menu menu-horizontal  text-base font-normal px-1">
+                <li class=" text-[#1a0403]"><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Donates</a></li>
+                <li><a href="add-req.html">Add Blood Request</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">LogIn</a></li>
+              </ul>
+            </div>
+            <div class="hidden lg:flex navbar-end rounded-lg ">
+              <div class="join text-black">
+                <select id="blood-group" name="blood-group"
+                class="shadow appearance-none border rounded-l-full  w-full px-4 text-gray-700 focus:outline-none" >
+                <option value=""disabled selected ="" >Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+               
+              </select>
+                </a>
+  
+                <i
+                  class="fa-solid fa-magnifying-glass btn btn-ghost join-item rounded-r-full bg-white  text-black p-4"></i>
+              </div>
+  
+            </div>
+          </div>
+        </nav>
+      </div>
+  
 
     </header>
 
@@ -1597,45 +1605,49 @@
 
     <footer class="pt-10">
 
-        <footer class="footer bg-neutral items-center text-neutral-content p-10">
-            <aside class="ml-20">
-                <img src="img/premier lago.png" class="h-24" alt="">
-                <p>
-                    Premier University.
-                    <br />
-                    Providing reliable tech since 2002
-                </p>
-            </aside>
-            <nav class="">
-                <h6 class="footer-title">Services</h6>
-                <a class="link link-hover">Branding</a>
-                <a class="link link-hover">Design</a>
-                <a class="link link-hover">Marketing</a>
-                <a class="link link-hover">Advertisement</a>
-            </nav>
-            <nav>
-                <h6 class="footer-title">Company</h6>
-                <a class="link link-hover">About us</a>
-                <a class="link link-hover">Contact</a>
-                <a class="link link-hover">Jobs</a>
-                <a class="link link-hover">Press kit</a>
-            </nav>
-            <nav>
-                <h6 class="footer-title">Legal</h6>
-                <a class="link link-hover">Terms of use</a>
-                <a class="link link-hover">Privacy policy</a>
-                <a class="link link-hover">Cookie policy</a>
-            </nav>
+        <footer class="footer grid grid-cols-2 lg:grid-cols-4 bg-neutral text-neutral-content p-10  ">
+          <aside class="mx-auto lg:ml-20 flex flex-col items-center lg:items-start">
+            <img src="img/premier lago.png" class="h-24 mb-4" alt="Premier University Logo">
+            <p class="text-center lg:text-left">
+              Premier University.
+              <br />
+              Providing reliable tech since 2002
+            </p>
+          </aside>
+          
+          <nav class="mx-auto lg:mx-0 ">
+            <h6 class="footer-title">Services</h6>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+          </nav>
+          
+          <nav class="mx-auto lg:mx-0">
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </nav>
+          
+          <nav class="mx-auto lg:mx-0">
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+          </nav>
+
+          
         </footer>
-
-
-        <footer class="footer footer-center  bg-neutral text-neutral-content p-4">
-            <aside>
-                <p>Copyright © 2024 - All right reserved by Premier University</p>
-            </aside>
+      
+        <footer class="footer footer-center bg-neutral text-neutral-content p-4">
+          <aside>
+            <p>Copyright © 2024 - All rights reserved by Premier University</p>
+          </aside>
         </footer>
-
-
-    </footer>
+      
+      </footer>
+      
 
 </body>

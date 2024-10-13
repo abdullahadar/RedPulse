@@ -102,7 +102,7 @@
           </div>
 
 
-          <div class="navbar-center hidden  lg:flex ">
+          <div class="navbar-center hidden lg:flex ">
 
             <ul class="menu menu-horizontal  text-base font-normal px-1">
               <li class=" text-[#1a0403]"><a href="index.html">Home</a></li>
@@ -113,10 +113,22 @@
             </ul>
           </div>
           <div class="hidden lg:flex navbar-end rounded-lg ">
-            <div class="join  text-black">
-              <a href="search.html">
-                <input class="input lg:input-bordered rounded-3xl join-item" placeholder="Search Donors" />
+            <div class="join text-black">
+              <select id="blood-group" name="blood-group"
+              class="shadow appearance-none border rounded-l-full  w-full px-4 text-gray-700 focus:outline-none" >
+              <option value=""disabled selected ="" >Select Blood Group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+             
+            </select>
               </a>
+
               <i
                 class="fa-solid fa-magnifying-glass btn btn-ghost join-item rounded-r-full bg-white  text-black p-4"></i>
             </div>
@@ -126,6 +138,7 @@
       </nav>
     </div>
 
+    
   </header>
 
 
@@ -1638,8 +1651,8 @@
 
       <footer class="pt-10">
 
-        <footer class="footer bg-neutral text-neutral-content p-10  ">
-          <aside class="mx-auto lg:ml-20 flex flex-col items-center lg:items-start">
+        <footer class="footer bg-neutral text-neutral-content p-10">
+          <aside class="mx-auto flex flex-col items-center lg:items-start">
             <img src="img/premier lago.png" class="h-24 mb-4" alt="Premier University Logo">
             <p class="text-center lg:text-left">
               Premier University.
@@ -1648,15 +1661,15 @@
             </p>
           </aside>
           
-          <nav class="mx-auto lg:mx-0 ">
+          <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0">
             <h6 class="footer-title">Services</h6>
             <a class="link link-hover">Branding</a>
             <a class="link link-hover">Design</a>
             <a class="link link-hover">Marketing</a>
             <a class="link link-hover">Advertisement</a>
           </nav>
-          
-          <nav class="mx-auto lg:mx-0">
+        
+          <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0">
             <h6 class="footer-title">Company</h6>
             <a class="link link-hover">About us</a>
             <a class="link link-hover">Contact</a>
@@ -1664,16 +1677,15 @@
             <a class="link link-hover">Press kit</a>
           </nav>
           
-          <nav class="mx-auto lg:mx-0">
+          <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0">
             <h6 class="footer-title">Legal</h6>
             <a class="link link-hover">Terms of use</a>
             <a class="link link-hover">Privacy policy</a>
             <a class="link link-hover">Cookie policy</a>
           </nav>
-
-          
         </footer>
-      
+        
+        
         <footer class="footer footer-center bg-neutral text-neutral-content p-4">
           <aside>
             <p>Copyright © 2024 - All rights reserved by Premier University</p>

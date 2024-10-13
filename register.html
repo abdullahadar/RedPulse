@@ -58,6 +58,8 @@
     <!---------- nav start ----------->
 
 
+   
+
     <div class="fixed top-0 left-0 right-0 bg-red-color  lg:text-white  z-50">
       <nav class="container mx-auto">
         <div class="navbar ">
@@ -71,7 +73,7 @@
               </div>
               <ul tabindex="0"
                 class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                <li class=" "><a href="index.html">Home</a></li>
+                <li class=""><a href="index.html">Home</a></li>
                 <li><a href="search.html">Search Donates</a></li>
                 <li><a href="add-req.html">Add Blood Request</a></li>
                 <li><a href="register.html">Register</a></li>
@@ -80,22 +82,16 @@
             </div>
 
 
-            <a href="index.html">
+            <div class="btn btn-ghost text-xl  ">
+              <img class="h-8" src="img/icon/RedPlus.png">
 
-              <div class="btn btn-ghost text-xl">
-
-                <img class="h-8" src="img/icon/RedPlus.png">
-
-                <p class="font-bold text-xl">RedPlus</p>
-              </div>
-
-            </a>
-
+              <p class="font-bold text-xl ">RedPlus</p>
+            </div>
 
           </div>
 
 
-          <div class="navbar-center hidden  lg:flex ">
+          <div class="navbar-center hidden lg:flex ">
 
             <ul class="menu menu-horizontal  text-base font-normal px-1">
               <li class=" text-[#1a0403]"><a href="index.html">Home</a></li>
@@ -105,11 +101,23 @@
               <li><a href="login.html">LogIn</a></li>
             </ul>
           </div>
-          <div class="navbar-end rounded-lg ">
-            <div class="join  text-black">
-              <a href="search.html">
-                <input class="input input-bordered rounded-3xl join-item" placeholder="Search Donors" />
+          <div class="hidden lg:flex navbar-end rounded-lg ">
+            <div class="join text-black">
+              <select id="blood-group" name="blood-group"
+              class="shadow appearance-none border rounded-l-full  w-full px-4 text-gray-700 focus:outline-none" >
+              <option value=""disabled selected ="" >Select Blood Group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+             
+            </select>
               </a>
+
               <i
                 class="fa-solid fa-magnifying-glass btn btn-ghost join-item rounded-r-full bg-white  text-black p-4"></i>
             </div>
