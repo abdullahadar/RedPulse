@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -24,6 +24,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      color-scheme: light;
+    }
+
+
     .font-poppins {
       font-family: "Poppins", sans-serif;
     }
@@ -64,7 +69,7 @@
 
 </head>
 
-<body class="font-poppins">
+<body class="font-poppins bg-white text-black">
 
   <header>
 
@@ -115,18 +120,18 @@
           <div class="hidden lg:flex navbar-end rounded-lg ">
             <div class="join text-black">
               <select id="blood-group" name="blood-group"
-              class="shadow appearance-none border rounded-l-full  w-full px-4 text-gray-700 focus:outline-none" >
-              <option value=""disabled selected ="" >Select Blood Group</option>
-              <option value="A+">A+</option>
-              <option value="A-">A-</option>
-              <option value="B+">B+</option>
-              <option value="B-">B-</option>
-              <option value="O+">O+</option>
-              <option value="O-">O-</option>
-              <option value="AB+">AB+</option>
-              <option value="AB-">AB-</option>
-             
-            </select>
+                class="shadow appearance-none border rounded-l-full  w-full px-4 text-gray-700 focus:outline-none">
+                <option value="" disabled selected="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+
+              </select>
               </a>
 
               <i
@@ -138,7 +143,7 @@
       </nav>
     </div>
 
-    
+
   </header>
 
 
@@ -303,74 +308,106 @@
 
 
 
-        <!---------- search blood group---- -->
+        <!---------- blood group---- -->
 
+        <section class="mx-auto bg-base-200 dark:bg-white container py-6 ">
 
-        <section class="bg-base-200 container py-6 mx-auto">
-          <h2 class="text-2xl sm:text-3xl font-medium text-center text-black my-8 sm:my-14">Blood Group</h2>
+          <h2 class="text-3xl font-medium text-center text-black  my-14 ">Blood Group</h2>
 
-          <div class="flex justify-center px-4 sm:px-10 lg:px-40 mb-6 sm:mb-10">
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              <!-- A+ -->
-              <div class="rounded-lg">
-                <div class="card w-full max-w-xs shadow-2xl">
-                  <img src="img/icon/a+.png" class="w-full h-auto bg-base-100" alt="A+">
+          <div class="flex justify-center px-4 lg:px-40 mb-10">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4  ">
+
+              <div class=" rounded-lg ">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/a+.png" class="btn h-auto bg-base-100 dark:bg-white " alt="">
+                    </div>
+                  </form>
                 </div>
+                </form>
               </div>
 
-              <!-- A- -->
-              <div class="rounded-lg">
-                <div class="card w-full max-w-xs shadow-2xl">
-                  <img src="img/icon/a-.png" class="w-full h-auto bg-base-100" alt="A-">
+
+              <div class=" rounded-lg">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/a-.png" class="btn h-auto bg-base-100 dark:bg-white " alt="">
+                    </div>
                 </div>
+                </form>
               </div>
 
-              <!-- AB+ -->
-              <div class="rounded-lg">
-                <div class="card w-full max-w-xs shadow-2xl">
-                  <img src="img/icon/ab+.png" class="w-full h-auto bg-base-100" alt="AB+">
+
+
+              <div class=" rounded-lg ">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/ab+.png" class="btn h-auto bg-base-100 dark:bg-white" alt="">
+                    </div>
                 </div>
+                </form>
               </div>
 
-              <!-- AB- -->
-              <div class="rounded-lg">
-                <div class="card w-full max-w-xs shadow-2xl">
-                  <img src="img/icon/Ab-.png" class="w-full h-auto bg-base-100" alt="AB-">
+
+
+              <div class=" rounded-lg">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/Ab-.png" class="btn h-auto bg-base-100 dark:bg-white " alt="">
+                    </div>
                 </div>
+                </form>
               </div>
 
-              <!-- B+ -->
-              <div class="rounded-lg">
-                <div class="card w-full max-w-xs shadow-2xl">
-                  <img src="img/icon/b+.png" class="w-full h-auto bg-base-100" alt="B+">
+              <div class=" rounded-lg">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/b+.png" class="btn h-auto bg-base-100 dark:bg-white " alt="">
+                    </div>
                 </div>
+                </form>
               </div>
 
-              <!-- B- -->
-              <div class="rounded-lg">
-                <div class="card w-full max-w-xs shadow-2xl">
-                  <img src="img/icon/b-.png" class="w-full h-auto bg-base-100" alt="B-">
+              <div class=" rounded-lg">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/b-.png" class="btn h-auto bg-base-100  dark:bg-white" alt="">
+                    </div>
                 </div>
+                </form>
               </div>
 
-              <!-- O+ -->
-              <div class="rounded-lg">
-                <div class="card w-full max-w-xs shadow-2xl">
-                  <img src="img/icon/o+.png" class="w-full h-auto bg-base-100" alt="O+">
+              <div class=" rounded-lg">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/o+.png" class="btn h-auto bg-base-100 dark:bg-white" alt="">
+                    </div>
                 </div>
+                </form>
               </div>
 
-              <!-- O- -->
-              <div class="rounded-lg">
-                <div class="card w-full max-w-xs shadow-2xl">
-                  <img src="img/icon/o-.png" class="w-full h-auto bg-base-100" alt="O-">
+              <div class=" rounded-lg">
+                <div class="card w-full max-w-xs shrink-0 shadow-2xl">
+                  <form class="">
+                    <div class="">
+                      <img src="img/icon/o-.png" class="btn h-auto bg-base-100 dark:bg-white" alt="">
+                    </div>
                 </div>
+                </form>
               </div>
+
             </div>
+
           </div>
+
         </section>
-
-
 
       </div>
 
@@ -383,26 +420,25 @@
 
       <!------------- Recent Donars ------------>
 
-      <section class="mx-auto container bg-base-200 rounded-lg lg:px-8 mt-20">
+      <section class="mx-auto container bg-base-200 dark:bg-white rounded-lg lg:px-8 mt-20">
 
         <h2 class="text-3xl text-center py-10 font-bold">Reacent Donars</h2>
 
-        <div class="carousel w-full">
+        <div class="carousel w-full ">
 
           <!-- item1 -->
-
           <div id="item1" class="carousel-item w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 rounded-lg text-sm pb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 rounded-lg pb-8">
 
               <!-------------- first 1 card   ------- -->
 
-              <div class="card card-side flex flex-col lg:flex-row bg-base-100 px-5 shadow-xl">
-                <figure class="lg:w-1/4 pt-5 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/adar.jpg" alt="Movie" />
                 </figure>
 
 
-                <div class="card-body lg:w-2/3 text-red-500">
+                <div class="card-body lg:w-2/3  text-red-500">
                   <h2 class="card-title text-2xl">O+</h2>
                   <div class="flex gap-2">
                     <i class="fa-solid fa-user"></i>
@@ -424,14 +460,17 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
 
               <!-- 2nd card ---- -->
-              <div class="card card-side flex flex-col lg:flex-row bg-base-100 px-5 shadow-xl">
-                <figure class="lg:w-1/4 pt-5  ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/edhi.jpeg" alt="Movie" />
                 </figure>
 
@@ -458,15 +497,18 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
 
               <!-- 3rd card  -->
 
-              <div class="card card-side flex flex-col lg:flex-row bg-base-100 px-5 shadow-xl">
-                <figure class="lg:w-1/4 pt-5 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/basit.jpg" alt="Movie" />
                 </figure>
 
@@ -493,7 +535,10 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
@@ -501,8 +546,8 @@
 
               <!-- 4th card  -->
 
-              <div class="card card-side flex flex-col lg:flex-row bg-base-100 px-5 shadow-xl">
-                <figure class="lg:w-1/4 pt-5 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/basit-1.jpg" alt="Movie" />
                 </figure>
 
@@ -529,15 +574,18 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
 
               <!-- 5th card  -->
 
-              <div class="card card-side flex flex-col lg:flex-row bg-base-100 px-5 shadow-xl">
-                <figure class="lg:w-1/4 pt-5 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/edhi-1.JPG" alt="Movie" />
                 </figure>
 
@@ -564,7 +612,10 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
@@ -572,8 +623,8 @@
 
               <!-- 6th card  -->
 
-              <div class="card card-side flex flex-col lg:flex-row bg-base-100 px-5 shadow-xl">
-                <figure class="lg:w-1/4 pt-5 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/basit-2.JPG" alt="Movie" />
                 </figure>
 
@@ -599,7 +650,10 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
@@ -615,8 +669,8 @@
 
               <!-------------- first 1 card   ------- -->
 
-              <div class="card card-side flex flex-col lg:flex-row bg-base-100 px-5 shadow-xl">
-                <figure class="lg:w-1/4 pt-5 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl ">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/edhi-3.JPG" alt="Movie" />
                 </figure>
 
@@ -643,14 +697,17 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
 
               <!-- 2nd card ---- -->
-              <div class="card card-side bg-base-100 px-5 shadow-xl">
-                <figure class="w-1/4 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/adar.jpg" alt="Movie" />
                 </figure>
 
@@ -677,15 +734,17 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
 
               <!-- 3rd card  -->
-
-              <div class="card card-side bg-base-100 px-5 shadow-xl">
-                <figure class="w-1/4 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/basit-1.jpg" alt="Movie" />
                 </figure>
 
@@ -712,7 +771,10 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
@@ -720,8 +782,8 @@
 
               <!-- 4th card  -->
 
-              <div class="card card-side bg-base-100 px-5 shadow-xl">
-                <figure class="w-1/4 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/adar.jpg" alt="Movie" />
                 </figure>
 
@@ -748,15 +810,18 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
 
               <!-- 5th card  -->
 
-              <div class="card card-side bg-base-100 px-5 shadow-xl">
-                <figure class="w-1/4 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/basit-2.JPG" alt="Movie" />
                 </figure>
 
@@ -783,7 +848,10 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
@@ -791,8 +859,8 @@
 
               <!-- 6th card  -->
 
-              <div class="card card-side bg-base-100 px-5 shadow-xl">
-                <figure class="w-1/4 ">
+              <div class="card card-side flex flex-col lg:flex-row dark:bg-white bg-base-100 shadow-xl">
+                <figure class="lg:w-1/4  p-5 ">
                   <img src="img/adar.jpg" alt="Movie" />
                 </figure>
 
@@ -818,7 +886,10 @@
                   </div>
 
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">View Details</button>
+                    <button
+                    class="btn bg-red-color text-white border-none shadow-lg py-2 px-4 text-sm sm:text-base md:text-lg">
+                    View Details
+                  </button>
                   </div>
                 </div>
               </div>
@@ -1270,7 +1341,7 @@
 
 
         </div>
-        <div class="flex w-full justify-center gap-2 py-2">
+        <div class="flex w-full justify-center gap-2 py-2  ">
           <a href="#item1" class="btn btn-xs">1</a>
           <a href="#item2" class="btn btn-xs">2</a>
           <a href="#item3" class="btn btn-xs">3</a>
@@ -1282,7 +1353,7 @@
 
       <!-------------- Latest News ---- ----- -->
 
-      <section class="mx-auto container  bg-base-200 rounded-lg lg:px-8 lg:mt-20">
+      <section class="mx-auto container  bg-base-200 dark:bg-white rounded-lg lg:px-8 lg:mt-20">
 
         <h2 class="text-3xl text-center pt-10 font-bold">Latest News</h2>
 
@@ -1297,7 +1368,7 @@
               <div class=" flex flex-col lg:flex-row gap-5 py-8">
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-1.jpg" alt="" class="rounded-xl h-44" />
                     </figure>
@@ -1315,7 +1386,7 @@
 
 
                 <div class="">
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5 h-[]">
                       <img src="img/blog-2.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1335,7 +1406,7 @@
 
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-3.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1353,7 +1424,7 @@
 
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-4.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1382,7 +1453,7 @@
               <div class=" flex flex-col lg:flex-row gap-5 py-8">
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-2.jpg" alt="" class="rounded-xl h-44" />
                     </figure>
@@ -1400,7 +1471,7 @@
 
 
                 <div class="">
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5 h-[]">
                       <img src="img/blog-2.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1420,7 +1491,7 @@
 
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-3.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1438,7 +1509,7 @@
 
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-4.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1467,7 +1538,7 @@
               <div class=" flex flex-col lg:flex-row gap-5 py-8">
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-2.jpg" alt="" class="rounded-xl h-44" />
                     </figure>
@@ -1485,7 +1556,7 @@
 
 
                 <div class="">
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5 h-[]">
                       <img src="img/blog-1.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1505,7 +1576,7 @@
 
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-2.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1523,7 +1594,7 @@
 
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-2.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1550,7 +1621,7 @@
               <div class=" flex flex-col lg:flex-row gap-5 py-8">
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-1.jpg" alt="" class="rounded-xl h-44" />
                     </figure>
@@ -1588,7 +1659,7 @@
 
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-1.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1606,7 +1677,7 @@
 
 
                 <div>
-                  <div class="card bg-base-100 max-w-lg shadow-xl">
+                  <div class="card bg-base-100 dark:bg-white max-w-lg shadow-xl">
                     <figure class="px-5 pt-5">
                       <img src="img/blog-4.jpg" alt="" class="rounded-xl  h-44" />
                     </figure>
@@ -1639,61 +1710,61 @@
 
       </section>
 
-      
+
     </section>
 
   </main>
 
 
 
-      <!------------------- footer ----------- -->
+  <!------------------- footer ----------- -->
 
 
-      <footer class="pt-10">
+  <footer class="pt-10">
 
-        <footer class="footer bg-neutral text-neutral-content p-10">
-          <aside class="mx-auto flex flex-col items-center lg:items-start">
-            <img src="img/premier lago.png" class="h-24 mb-4" alt="Premier University Logo">
-            <p class="text-center lg:text-left">
-              Premier University.
-              <br />
-              Providing reliable tech since 2002
-            </p>
-          </aside>
-          
-          <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0">
-            <h6 class="footer-title">Services</h6>
-            <a class="link link-hover">Branding</a>
-            <a class="link link-hover">Design</a>
-            <a class="link link-hover">Marketing</a>
-            <a class="link link-hover">Advertisement</a>
-          </nav>
-        
-          <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0">
-            <h6 class="footer-title">Company</h6>
-            <a class="link link-hover">About us</a>
-            <a class="link link-hover">Contact</a>
-            <a class="link link-hover">Jobs</a>
-            <a class="link link-hover">Press kit</a>
-          </nav>
-          
-          <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0">
-            <h6 class="footer-title">Legal</h6>
-            <a class="link link-hover">Terms of use</a>
-            <a class="link link-hover">Privacy policy</a>
-            <a class="link link-hover">Cookie policy</a>
-          </nav>
-        </footer>
-        
-        
-        <footer class="footer footer-center bg-neutral text-neutral-content p-4">
-          <aside>
-            <p>Copyright © 2024 - All rights reserved by Premier University</p>
-          </aside>
-        </footer>
-      
-      </footer>
-      
+    <footer class="footer bg-neutral dark:bg-white text-neutral-content p-10">
+      <aside class="mx-auto flex flex-col items-center lg:items-start">
+        <img src="img/premier lago.png" class="h-24 mb-4" alt="Premier University Logo">
+        <p class="text-center  lg:text-left">
+          Premier University.
+          <br />
+          Providing reliable tech since 2002
+        </p>
+      </aside>
+
+      <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0 ">
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+
+      <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0">
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+
+      <nav class="mx-auto lg:mx-0 mt-4 lg:mt-0">
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
+
+
+    <footer class="footer footer-center bg-neutral text-neutral-content p-4">
+      <aside>
+        <p>Copyright © 2024 - All rights reserved by Premier University</p>
+      </aside>
+    </footer>
+
+  </footer>
 </body>
+
 
 </html>
